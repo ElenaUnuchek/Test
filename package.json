@@ -1,0 +1,30 @@
+{
+  "name": "Test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "111.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElenaUnuchek/Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElenaUnuchek/Test/issues"
+  },
+  "homepage": "https://github.com/ElenaUnuchek/Test#readme",
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  }
+}
